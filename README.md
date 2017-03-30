@@ -57,3 +57,9 @@ oute":"homepage"},"request_uri":"http://localhost:8001/app_dev.php/","method":"G
 [2017-03-30 22:42:14] security.INFO: Basic authentication Authorization header found for user. {"username":"Chris"} []
 [2017-03-30 22:42:15] security.DEBUG: Stored the security token in the session. {"key":"_security_main"} []
 ```
+
+## User Roles from Neo4j
+
+Want to see how to use user roles backed by Neo4j as well, check this PR : 
+
+https://github.com/ikwattro/neo4j-ogm-symfony-security/pull/1
