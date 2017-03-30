@@ -1,0 +1,7 @@
+services:
+  app.entity_manager:
+    class: AppBundle\Manager\EntityManager
+    arguments: ['%kernel.cache_dir%/neo4j']
+  app.user_provider:
+    class: AppBundle\Security\UserProvider
+    arguments: ['@app.entity_manager']
