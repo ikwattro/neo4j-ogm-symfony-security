@@ -14,7 +14,7 @@ composer install
 Create a User node in your database :
 
 ```php
-CREATE (n:User {username:"Chris", password:"$2y$13$MAKog3FJcJ0PL4LOhlWplOoQmGOfO2HJVu9LA/bX6maWCYS5g5GWq")
+CREATE (n:User {username:"Chris", password:"$2y$13$MAKog3FJcJ0PL4LOhlWplOoQmGOfO2HJVu9LA/bX6maWCYS5g5GWq"})
 ```
 
 The demo uses the standard bcrypt algo for hashing passwords (see SF Security Provider documentation).
