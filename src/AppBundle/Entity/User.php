@@ -46,6 +46,13 @@ class User implements AdvancedUserInterface, \Serializable
      */
     protected $isActive;
 
+    /**
+     * @var Role[]
+     *
+     * @OGM\Relationship(type="HAS_ROLE", direction="OUTGOING", collection=true, mappedBy="users", targetEntity="Role")
+     */
+    protected $roles;
+
     public function __construct($username)
     {
         $this->username = $username;
@@ -125,7 +132,13 @@ class User implements AdvancedUserInterface, \Serializable
 
     public function getRoles()
     {
-        return ['ROLE_USER'];
+        $roles = [];
+
+        foreach ($this->roles as $role) {
+            $roles[] = $role->getName();
+        }
+
+        return $roles;
     }
 
     public function getPassword()
